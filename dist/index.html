@@ -3,176 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="山中萨满三大体系世界观与角色档案">
-  <title>山中萨满｜三大体系档案</title>
+  <meta name="description" content="mountain-shaman 三大阵营人物档案">
+  <title>mountain-shaman</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="返回顶部">
-      <span class="brand-mark">山</span>
-      <span>山中萨满档案</span>
-    </a>
-    <nav aria-label="主要导航">
-      <a href="#systems">三大体系</a>
-      <a href="#characters">角色图鉴</a>
-      <a href="#boundary">转译边界</a>
-    </nav>
-  </header>
+  <header class="masthead"><h1>mountain-shaman</h1></header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">THE MOUNTAIN REMEMBERS THE SEA</p>
-        <h1 id="hero-title">山是古海<br>留下的骨</h1>
-        <p class="hero-lead">水退入山腹以后，鱼首之民仍能听见地下潮汐。萨满不是同一种职业，而是三套彼此冲突、又共同维持山体生命的知识体系。</p>
-        <a class="text-link" href="#systems">进入三大体系 <span>↓</span></a>
-      </div>
-      <div class="hero-orbit" aria-label="三大体系关系图">
-        <div class="orbit orbit-blue"><span>守潮者</span><small>穿越世界</small></div>
-        <div class="orbit orbit-red"><span>赤脉者</span><small>重造世界</small></div>
-        <div class="orbit orbit-gold"><span>合祀者</span><small>安置关系</small></div>
-        <div class="orbit-core">古海<br>山骨</div>
+  <main class="faction-grid" aria-label="三大萨满阵营">
+    <section class="faction-column tide" aria-labelledby="tide-name">
+      <button class="faction-intro" type="button" aria-expanded="false">
+        <span class="faction-number">I · 10</span>
+        <span class="faction-name" id="tide-name">守潮者</span>
+        <span class="faction-action">展开阵营介绍</span>
+        <span class="faction-description">他们相信山腹仍保存着古海的潮路。轻金属、绳索、鼓膜和活动环构成可穿戴的第二身体；萨满通过倾听、测量、引导与穿越，维持地下水脉之间的流动关系。</span>
+      </button>
+      <div class="character-list">
+        <article class="character" style="--head-y:24%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/tide-keeper-forked-listener-v1.png" alt="分叉听潮者" loading="eager"></span><span class="character-name">分叉听潮者</span></button><div class="biography"><div><p>他出生在两条地下河交叠的石村，自幼便能在众人只听见风声的地方分辨出两种水音。一次塌方后，他凭一根削成双叉的枯木找到被困七日的采盐人，从此将那根木杖改造成布满细绳与活动环的听潮器。如今他负责判断潮路的分合，却始终隐瞒一个事实：近来杖上传回了第三种不属于水的脉动。</p></div></div></article>
+        <article class="character" style="--head-y:22%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/thunder-drum-listener-v4.png" alt="雷鼓听者" loading="lazy"></span><span class="character-name">雷鼓听者</span></button><div class="biography"><div><p>她曾是山谷里最年轻的传讯人，奔跑速度快，却总把远方的警告说得太迟。后来一场无云雷震撕开了北坡，她把裂谷回声记进鼓面，学会让整个聚落同时听见山体深处的变化。她性情沉静，落槌却极有决断；每当鼓声出现无人敲出的第四拍，她便会独自离村寻找震源。</p></div></div></article>
+        <article class="character" style="--head-y:21%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/whisker-pulse-listener-v3.png" alt="须脉听者" loading="lazy"></span><span class="character-name">须脉听者</span></button><div class="biography"><div><p>他生来鱼须残缺，因此比同伴更早学会借助垂带、坠片和皮肤感知极细微的水流。少年时，他循着一滴水在岩壁后的颤动找到一条濒死支流，也因此被守潮者收为学徒。他对任何细小变化都过分敏锐，常能先于众人察觉危险，却也很难在没有流水声的房间里安睡。</p></div></div></article>
+        <article class="character" style="--head-y:23%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/sturgeon-bone-wind-listener-v1.png" alt="鲟骨听风者" loading="lazy"></span><span class="character-name">鲟骨听风者</span></button><div class="biography"><div><p>她来自终年封雪的高地洞群，那里的人凭洞口气味辨别季节。一次寒潮封死归路，她用长形头骨与层叠衣片测出一股温暖上升气流，带领同行者穿过未被记录的山腹。此后她成为远行队的开路者，相信风从不说谎；但她最近发现，某些洞穴正在呼出带有旧海盐味的暖气。</p></div></div></article>
+        <article class="character" style="--head-y:22%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/pufferfish-breath-keeper-v1.png" alt="河豚守息者" loading="lazy"></span><span class="character-name">河豚守息者</span></button><div class="biography"><div><p>他年轻时脾气急躁，曾在潮汐逆转前贸然下水，导致三名同伴被卷入回流。获救后，他用多年练习控制呼吸、心跳与身体压力，把悔恨变成一种近乎苛刻的耐心。如今他守在潮门最安静的位置，以一次长息决定何时开放水道；村里人说，他每次浮出水面都像重新活过一次。</p></div></div></article>
+        <article class="character" style="--head-y:20%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/trout-gill-snow-listener-v1.png" alt="鳟鳃听雪者" loading="lazy"></span><span class="character-name">鳟鳃听雪者</span></button><div class="biography"><div><p>她在融雪季出生，鳃缘对温度极为敏感。幼年时的一场反常暖雪让她提前听见冰层下的碎裂声，救下了正在河面迁徙的族人。她把不同雪粒落在鳃帘上的触感记成一套私人历法，话不多，却会为每场雪命名；如今最令她不安的是，连续三个冬天出现了同一个不祥名字。</p></div></div></article>
+        <article class="character" style="--head-y:22%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/eel-line-abyss-measurer-v1.png" alt="鳗线测渊者" loading="lazy"></span><span class="character-name">鳗线测渊者</span></button><div class="biography"><div><p>他原是修桥人的孩子，习惯用绳长和回弹理解看不见的空间。一次桥基坍塌把他拖入深穴，他靠缠在腕上的测线摸索了两天才返回地面，此后再也不肯相信未经测量的地图。现在他专门探查山腹空腔，并把每次下线都视作与深渊的一次谈判；他的旧测线上，仍留着一段无法解释的反向刻度。</p></div></div></article>
+        <article class="character" style="--head-y:17%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/carp-whisker-boundary-weaver-v1.png" alt="鲤须编界者" loading="lazy"></span><span class="character-name">鲤须编界者</span></button><div class="biography"><div><p>她成长在水村与岩岸争执不断的边界，两边都认为她更属于对方。她没有选择站队，而是把水位、通路和季节约定编成不同绳结，让争执双方能够共享同一段河岸。久而久之，她成为守潮者中最擅长调停的人；可她知道，边界一旦被编成结，也可能变成一条勒紧后来者的绳。</p></div></div></article>
+        <article class="character" style="--head-y:18%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/ray-veil-dream-keeper-v1.png" alt="鳐幕守梦者" loading="lazy"></span><span class="character-name">鳐幕守梦者</span></button><div class="biography"><div><p>他曾在一次集体梦游中失去兄长，从此相信错误的地下回声会借睡眠寻找出口。他用柔软垂幕、金属坠片和水声围出安眠区域，守在病者与远行者身边直到天亮。他待人温和，却拒绝谈论自己的梦；有人偶然看见他独睡时，床边从不悬挂那面保护别人的鳐幕。</p></div></div></article>
+        <article class="character" style="--head-y:19%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/seahorse-mist-sower-v1.png" alt="海马播雾者" loading="lazy"></span><span class="character-name">海马播雾者</span></button><div class="biography"><div><p>她来自一条逐年干涸的山谷，小时候只能在清晨短暂的雾里感到水仍活着。成为萨满后，她学会从岩缝收集水汽，再将雾播回断裂的潮路，为迁徙和播种争取几日时间。她总随身携带故乡最后一瓶雾，却迟迟不肯使用，因为一旦打开，就等于承认那座山谷已经无法自行醒来。</p></div></div></article>
       </div>
     </section>
 
-    <section class="systems" id="systems" aria-labelledby="systems-title">
-      <div class="section-heading">
-        <p class="section-index">01 / WORLD SYSTEMS</p>
-        <h2 id="systems-title">三种解释世界的方法</h2>
-        <p>它们不是水、火、神秘三种元素，而是三套知识、仪式与政治秩序。</p>
-      </div>
-
-      <article class="system-panel blue-panel">
-        <div class="panel-number">I</div>
-        <div class="panel-copy">
-          <p class="faction-kicker">钴蓝阵营 · TIDE KEEPERS</p>
-          <h3>守潮者</h3>
-          <p class="creed">世界是一组可以倾听、测量与穿越的流动关系。</p>
-          <p>他们相信山腹仍保存古海的潮路。轻金属、绳索、鼓膜和活动环构成可穿戴的第二身体；萨满以接收、引导和跨越维持地下循环。</p>
-          <dl>
-            <div><dt>现实结构参照</dt><dd>以鄂温克为中心的北亚传统</dd></div>
-            <div><dt>动作语言</dt><dd>听 · 触 · 测 · 引 · 穿越</dd></div>
-            <div><dt>物质语法</dt><dd>薄金属、绳、膜、流苏、移动连接件</dd></div>
-          </dl>
-        </div>
-        <div class="panel-rule"></div>
-      </article>
-
-      <article class="system-panel red-panel">
-        <div class="panel-number">II</div>
-        <div class="panel-copy">
-          <p class="faction-kicker">冷猩红阵营 · RED VEIN KEEPERS</p>
-          <h3>赤脉者</h3>
-          <p class="creed">世界是一副可以加固、截断并重新制造的物质结构。</p>
-          <p>他们为山穿上第二副铁骨。厚铁片、铆钉、夹具和压力膜承担重量；猩红只出现在正在受压、发热或被重新接合的节点。</p>
-          <dl>
-            <div><dt>现实结构参照</dt><dd>蒙古—布里亚特传统</dd></div>
-            <div><dt>动作语言</dt><dd>钉 · 压 · 锻 · 切 · 封合</dd></div>
-            <div><dt>物质语法</dt><dd>铁骨、厚片、铆接、夹具、承压结构</dd></div>
-          </dl>
-        </div>
-        <div class="panel-rule"></div>
-      </article>
-
-      <article class="system-panel gold-panel">
-        <div class="panel-number">III</div>
-        <div class="panel-copy">
-          <p class="faction-kicker">赭金试色 · CONFLUENCE KEEPERS</p>
-          <h3>合祀者 <small>暂名</small></h3>
-          <p class="creed">世界是一张不断接纳新祖、新灵与新来者的关系谱。</p>
-          <p>这是最复杂、分支最多的体系。它从东北狩猎文化、满族家祭与野祭、中国朝鲜族支系以及后期汉族民间信仰的长期接触中抽取结构，让不同来路的存在被辨认、命名、分座或除名。</p>
-          <dl>
-            <div><dt>现实结构参照</dt><dd>中国东北多民族复合萨满谱系</dd></div>
-            <div><dt>动作语言</dt><dd>认 · 请 · 迎 · 命名 · 分座 · 送行</dd></div>
-            <div><dt>内部支系</dt><dd>猎场、宗族家祭、边镇移民及持续生长的地方分支</dd></div>
-          </dl>
-        </div>
-        <div class="panel-rule"></div>
-      </article>
-    </section>
-
-    <section class="characters" id="characters" aria-labelledby="characters-title">
-      <div class="section-heading character-heading">
-        <div>
-          <p class="section-index">02 / CHARACTER ARCHIVE</p>
-          <h2 id="characters-title">萨满图鉴</h2>
-        </div>
-        <div class="filters" role="group" aria-label="按阵营筛选">
-          <button class="filter active" data-filter="all">全部</button>
-          <button class="filter blue" data-filter="blue">守潮者</button>
-          <button class="filter red" data-filter="red">赤脉者</button>
-          <button class="filter gold" data-filter="gold">合祀者</button>
-        </div>
-      </div>
-
-      <div class="character-grid">
-        <article class="character-card feature" data-faction="gold">
-          <button class="image-button" data-image="assets/northeast-confluence-lineage-keeper-v1.png" data-title="合祀者·纳谱者" aria-label="放大查看合祀者纳谱者">
-            <img src="assets/northeast-confluence-lineage-keeper-v1.png" alt="背负多层谱架、正在编入空白谱牌的狗鱼首合祀者" loading="eager">
-          </button>
-          <div class="card-copy">
-            <span class="faction-tag gold">合祀者 · 正式候选</span>
-            <h3>纳谱者</h3>
-            <p>背负一座可增补的活谱架。上层保存猎场路径，中层安置宗族鼓铃，下层收纳边镇后来加入的谱牌与旧物；此刻正在为一个无名存在分配位置。</p>
-            <ul><li>鱼种：北方狗鱼</li><li>主道具：可穿戴谱架</li><li>仪式动作：编入与分座</li></ul>
-          </div>
-        </article>
-
-        <article class="character-card feature" data-faction="red">
-          <button class="image-button" data-image="assets/red-vein-iron-rib-sealer-v1.png" data-title="赤脉者·铁肋封隙者" aria-label="放大查看赤脉者铁肋封隙者">
-            <img src="assets/red-vein-iron-rib-sealer-v1.png" alt="以铁肋外骨骼把巨大楔具压入山体裂隙的鲶鱼首赤脉者" loading="eager">
-          </button>
-          <div class="card-copy">
-            <span class="faction-tag red">赤脉者</span>
-            <h3>铁肋封隙者</h3>
-            <p>以承重铁肋将身体变成夹具，双手把楔钉压入山体裂缝。猩红沿受压节点和裂隙出现，标记正在被重定向的山中热脉。</p>
-            <ul><li>鱼种：甲鲶</li><li>主道具：楔形封隙夹具</li><li>仪式动作：压入与封合</li></ul>
-          </div>
-        </article>
-
-        <article class="character-card" data-faction="red"><button class="image-button" data-image="assets/red-vein-tensioner-v1.png" data-title="赤脉者·绞索牵脉者"><img src="assets/red-vein-tensioner-v1.png" alt="操作横向绞盘和牵引索的河鳅首赤脉者" loading="lazy"></button><div class="card-copy"><span class="faction-tag red">赤脉者</span><h3>绞索牵脉者</h3><p>操作横向绞盘，将错位山脉重新拉回同一受力线。</p><ul><li>鱼种：河鳅</li><li>主道具：横向绞盘</li><li>仪式动作：拉紧</li></ul></div></article>
-        <article class="character-card" data-faction="red"><button class="image-button" data-image="assets/red-vein-furnace-ring-joiner-v1.png" data-title="赤脉者·熔环接骨者"><img src="assets/red-vein-furnace-ring-joiner-v1.png" alt="使用熔接环与双背风囊的狼鱼首赤脉者" loading="lazy"></button><div class="card-copy"><span class="faction-tag red">赤脉者</span><h3>熔环接骨者</h3><p>用双背风囊向圆形熔接环供压，把断裂石管重新接合。</p><ul><li>鱼种：狼鱼</li><li>主道具：熔接环与双风囊</li><li>仪式动作：熔接</li></ul></div></article>
-        <article class="character-card" data-faction="red"><button class="image-button" data-image="assets/red-vein-flow-rerouter-v1.png" data-title="赤脉者·断流改道者"><img src="assets/red-vein-flow-rerouter-v1.png" alt="操纵截流闸与杠杆的匙吻鲟首赤脉者" loading="lazy"></button><div class="card-copy"><span class="faction-tag red">赤脉者</span><h3>断流改道者</h3><p>以竖向闸板截断危险矿脉，同时开启新的旁路。</p><ul><li>鱼种：匙吻鲟</li><li>主道具：截流闸与杠杆</li><li>仪式动作：截断改道</li></ul></div></article>
-
-        <article class="character-card" data-faction="gold"><button class="image-button" data-image="assets/confluence-trail-registrar-v1.png" data-title="合祀者·猎径记踪者"><img src="assets/confluence-trail-registrar-v1.png" alt="在冬季林路读取路线轮的江鳕首合祀者" loading="lazy"></button><div class="card-copy"><span class="faction-tag gold">合祀者</span><h3>猎径记踪者</h3><p>在冬季林路分叉处读取踪迹，把可通行、禁入和季节迁徙编入路线轮。</p><ul><li>鱼种：江鳕</li><li>主道具：路线轮</li><li>仪式动作：记踪入册</li></ul></div></article>
-        <article class="character-card" data-faction="gold"><button class="image-button" data-image="assets/confluence-hearth-line-continuer-v1.png" data-title="合祀者·炉边续谱者"><img src="assets/confluence-hearth-line-continuer-v1.png" alt="在家屋火塘旁持小鼓续接家系织带的白鲑首合祀者" loading="lazy"></button><div class="card-copy"><span class="faction-tag gold">合祀者</span><h3>炉边续谱者</h3><p>在家屋火塘旁将新谱带系入三列家系织带，由亲属共同见证。</p><ul><li>鱼种：白鲑</li><li>主道具：家系织带和小鼓</li><li>仪式动作：续谱见证</li></ul></div></article>
-        <article class="character-card" data-faction="gold"><button class="image-button" data-image="assets/confluence-seat-adjudicator-v1.png" data-title="合祀者·边镇判席者"><img src="assets/confluence-seat-adjudicator-v1.png" alt="以判席天平比较旧谱牌与陌生来物的乌鳢首合祀者" loading="lazy"></button><div class="card-copy"><span class="faction-tag gold">合祀者</span><h3>边镇判席者</h3><p>在聚落门口称量旧谱牌与陌生来物，判断新灵是否能够入席。</p><ul><li>鱼种：乌鳢</li><li>主道具：判席天平</li><li>仪式动作：比较分座</li></ul></div></article>
-
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/tide-keeper-forked-listener-v1.png" data-title="守潮者·分叉听潮者"><img src="assets/tide-keeper-forked-listener-v1.png" alt="以分叉听潮杖测听岩壁的鱼首守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>分叉听潮者</h3><p>把分叉长杖贴住岩壁，以细绳和活动金属环读取回声、压力与隐藏潮路。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/thunder-drum-listener-v4.png" data-title="守潮者·雷鼓听者"><img src="assets/thunder-drum-listener-v4.png" alt="持鼓感知山中雷鸣的鱼首守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>雷鼓听者</h3><p>以鼓膜承接山腹的低频震动，把远处裂变转译成可被族群理解的节奏。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/whisker-pulse-listener-v3.png" data-title="守潮者·须脉听者"><img src="assets/whisker-pulse-listener-v3.png" alt="借鱼须感知水脉的守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>须脉听者</h3><p>让鱼须、垂带和细小坠件共同成为触觉阵列，寻找被岩层切断的微弱水脉。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/sturgeon-bone-wind-listener-v1.png" data-title="守潮者·鲟骨听风者"><img src="assets/sturgeon-bone-wind-listener-v1.png" alt="以鲟鱼骨甲结构听风的守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>鲟骨听风者</h3><p>利用长形头骨与纵向衣片分辨洞口气流，从风的温度判断地下水域的远近。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/pufferfish-breath-keeper-v1.png" data-title="守潮者·河豚守息者"><img src="assets/pufferfish-breath-keeper-v1.png" alt="盘坐水中的河豚首守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>河豚守息者</h3><p>以收拢姿态控制呼吸与体内压力，在静止中判断潮汐何时开始反转。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/trout-gill-snow-listener-v1.png" data-title="守潮者·鳟鳃听雪者"><img src="assets/trout-gill-snow-listener-v1.png" alt="感知雪与鳃部变化的鳟鱼首守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>鳟鳃听雪者</h3><p>观察雪粒落在鳃帘和衣层上的节奏，推算山上积雪将从哪条暗河融入古海。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/eel-line-abyss-measurer-v1.png" data-title="守潮者·鳗线测渊者"><img src="assets/eel-line-abyss-measurer-v1.png" alt="使用长线测量深渊的鳗鱼首守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>鳗线测渊者</h3><p>释放长线进入不可见的地下空腔，以线的弯折、湿度和回弹测绘深处。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/carp-whisker-boundary-weaver-v1.png" data-title="守潮者·鲤须编界者"><img src="assets/carp-whisker-boundary-weaver-v1.png" alt="坐在水边编结边界绳的鲤鱼首守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>鲤须编界者</h3><p>把两条潮路的差异编进绳结，在水面、岩岸和聚落之间建立可通行的边界。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/ray-veil-dream-keeper-v1.png" data-title="守潮者·鳐幕守梦者"><img src="assets/ray-veil-dream-keeper-v1.png" alt="展开垂幕的鳐鱼首守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>鳐幕守梦者</h3><p>展开带有金属坠片的软幕，让睡者的梦不被错误的地下回声带走。</p></div></article>
-        <article class="character-card" data-faction="blue"><button class="image-button" data-image="assets/seahorse-mist-sower-v1.png" data-title="守潮者·海马播雾者"><img src="assets/seahorse-mist-sower-v1.png" alt="在山中释放雾气的海马首守潮者" loading="lazy"></button><div class="card-copy"><span class="faction-tag blue">守潮者</span><h3>海马播雾者</h3><p>将从岩缝收集的水汽重新播入山谷，使断裂的潮感短暂连接。</p></div></article>
+    <section class="faction-column vein" aria-labelledby="vein-name">
+      <button class="faction-intro" type="button" aria-expanded="false"><span class="faction-number">II · 10</span><span class="faction-name" id="vein-name">赤脉者</span><span class="faction-action">展开阵营介绍</span><span class="faction-description">他们把世界理解为一副可以加固、截断并重新制造的物质结构。厚铁片、铆钉、夹具和压力膜承担重量；冷猩红只出现在正在受压、发热或被重新接合的节点。</span></button>
+      <div class="character-list">
+        <article class="character" style="--head-y:23%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-iron-rib-sealer-v1.png" alt="铁肋封隙者" loading="eager"></span><span class="character-name">铁肋封隙者</span></button><div class="biography"><div><p>他曾是山腹铆工，在一次连锁裂隙中以身体顶住失效的支架，胸骨从此必须依靠铁肋外架承重。赤脉者把这次幸存视为山对他的征用，他也因此成为最坚定的封隙者，习惯亲手把楔钉压进仍在震动的裂口。旁人敬畏他的意志，却不知道每封住一道裂隙，他都能听见其中像求救一样的水声。</p></div></div></article>
+        <article class="character" style="--head-y:21%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-tensioner-v1.png" alt="绞索牵脉者" loading="lazy"></span><span class="character-name">绞索牵脉者</span></button><div class="biography"><div><p>她出生在两座彼此远离的矿镇，父母各属于一边，童年始终往返于断裂山脊。成年后的一次地移让两镇彻底错位，她设计出横向绞盘，用数月时间把输水石管重新拉回同一受力线。她相信任何分离都能靠足够准确的张力修复，因此很少承认有些关系越拉越紧，最终只会先行崩断。</p></div></div></article>
+        <article class="character" style="--head-y:21%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-furnace-ring-joiner-v1.png" alt="熔环接骨者" loading="lazy"></span><span class="character-name">熔环接骨者</span></button><div class="biography"><div><p>他原本负责照料熔炉，从火色和风压判断金属何时可以合拢。一次地下石管断裂后，他把炉环套在断口外，以双背风囊维持整夜热压，保住了整座山城的供水。自此他被称作接骨者，做事耐心近乎固执；但每次完成熔接，他都会留下一个微小冷缝，提醒后人所谓完整只是被精心维持的状态。</p></div></div></article>
+        <article class="character" style="--head-y:19%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-flow-rerouter-v1.png" alt="断流改道者" loading="lazy"></span><span class="character-name">断流改道者</span></button><div class="biography"><div><p>她曾亲眼看见有毒矿浆沿旧脉涌入居地，而长老们仍在争论是否应当封闭祖辈开出的通道。她越过议会，独自落下第一道截流闸，因此救下下游，也背负了擅断山脉的罪名。如今她专门处理无人愿意作出的切断决定，随身杠杆上刻着所有被她关闭的旧路；其中一条，通向她自己的故乡。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-throat-pressure-regulator-v1.png" alt="火喉定压者" loading="lazy"></span><span class="character-name">火喉定压者</span></button><div class="biography"><div><p>他出生在终年轰鸣的通风井边，少年时曾凭管道里一声异常尖啸，提前疏散了一整班炉工。后来他把喉压调节器固定在胸颈之间，以自己的呼吸校准山腹气压。如今他负责在爆裂前关闭阀门，却渐渐发现：某些压力并不来自火场，而像是山体在试图说出一句被堵住的话。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-anchor-stratum-clamper-v1.png" alt="锚齿镇层者" loading="lazy"></span><span class="character-name">锚齿镇层者</span></button><div class="biography"><div><p>一次地层滑移夺走了她的兄长，也让她从此不肯把脚下的稳定视作理所当然。她制造出咬合岩层的锚齿夹，用宽阔站姿承受闭合时的反作用力。她救过许多沿坡聚落，但最近每次落锚，指针都会越过需要加固的岩层，转向更深处一个尚未命名的空洞。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-magnetic-ore-seeker-v1.png" alt="磁鳍寻矿者" loading="lazy"></span><span class="character-name">磁鳍寻矿者</span></button><div class="biography"><div><p>她的父亲曾用经验辨认矿色，她却更相信悬针在无风处发生的细小偏转。成年后，她把三枚铁针装入环身磁轭，能够在不开凿的情况下描出矿脉走向。她坚持遇到活水便停止标记，因此常与急于开采的人冲突；那三枚针近来却同时指向她自己的胸口。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-pressure-bladder-releaser-v1.png" alt="矿鳔释压者" loading="lazy"></span><span class="character-name">矿鳔释压者</span></button><div class="biography"><div><p>他是一次矿气爆发中唯一没有失去听觉的人，此后对空气里极轻的膨胀声异常敏感。他背负巨大的压力鳔，把危险气体缓慢引入安全裂谷，从不允许任何人催促泄压。众人惧怕轰鸣，他却最惧怕仪表忽然归于寂静，因为那通常意味着压力已经绕过了所有可以测量的路径。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-hinged-gate-caster-v1.png" alt="链鳃铸门者" loading="lazy"></span><span class="character-name">链鳃铸门者</span></button><div class="biography"><div><p>她曾在地下火路失控时看见一道旧门向错误的方向倒下，从此专门铸造能够从两侧闭合的铰链门架。每颗铆钉都由她亲手击入，并以事故中失去的炉工名字编号。她相信门不是为了永远封闭，而是为了给人争取选择；可她保留着一扇从未开启过的门，没有告诉任何人门后是什么。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/red-vein-quenching-needle-v1.png" alt="火吻淬脉者" loading="lazy"></span><span class="character-name">火吻淬脉者</span></button><div class="biography"><div><p>他从小就能从金属的颜色判断温度，却因一次过早入水的淬火毁掉了师父最后一件作品。此后他用长槽与双手铁钳夹住炽热矿脉，只在温度抵达最窄的窗口时让它骤冷定形。他做事精确得近乎冷酷，但每完成一次淬火，都会留下短短一段未处理的红线，作为对材料自身意愿的让步。</p></div></div></article>
       </div>
     </section>
 
-    <section class="boundary" id="boundary" aria-labelledby="boundary-title">
-      <div class="section-heading"><p class="section-index">03 / TRANSLATION BOUNDARY</p><h2 id="boundary-title">借结构，不搬运圣物</h2></div>
-      <div class="boundary-grid">
-        <p class="boundary-lead">现实文化是理解身体、材料、仪式组织和社会角色的参照，不是可以整套移植的服装目录。</p>
-        <ul>
-          <li><strong>保留差异：</strong>不把东北各民族传统合称为一套真实宗教。</li>
-          <li><strong>重新设计：</strong>不复制神名、神歌、神偶、祭坛、圣物形制或完整仪式顺序。</li>
-          <li><strong>避免善恶化：</strong>三派是认识论和政治立场之争，不是正邪阵营。</li>
-          <li><strong>角色先行动：</strong>每名萨满以一个明确仪式动作和一个主轮廓机制建立身份。</li>
-        </ul>
+    <section class="faction-column confluence" aria-labelledby="confluence-name">
+      <button class="faction-intro" type="button" aria-expanded="false"><span class="faction-number">III · 10</span><span class="faction-name" id="confluence-name">合祀者</span><span class="faction-action">展开阵营介绍</span><span class="faction-description">这是分支最多的体系。他们在猎场、宗族家祭、边镇移民与后来进入山中的信仰之间辨认关系，使不同来路的新祖、新灵与新来者能够被命名、分座、编入或送行。</span></button>
+      <div class="character-list">
+        <article class="character" style="--head-y:20%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/northeast-confluence-lineage-keeper-v1.png" alt="纳谱者" loading="eager"></span><span class="character-name">纳谱者</span></button><div class="biography"><div><p>他来自猎场、旧宗族与边镇移民共同生活的聚落，从小便发现同一个名字在三套谱系里有三种位置。一次无名亡者引发长期争执后，他制作了可以不断增补的活谱架，让来路不同的记忆先被保存，再慢慢决定归属。如今他负责接纳没有位置的存在，却最害怕自己的谱架终有一天庞大到无人能够背负。</p></div></div></article>
+        <article class="character" style="--head-y:20%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-trail-registrar-v1.png" alt="猎径记踪者" loading="lazy"></span><span class="character-name">猎径记踪者</span></button><div class="biography"><div><p>她在冬林中长大，能从折枝、蹄印和雪面风纹判断谁曾经过，以及谁刻意没有留下痕迹。成为合祀者后，她把动物迁徙、猎人禁路与失踪者归途编入一面路线轮，使道路不再只属于最早命名它的人。她珍视证据胜过传闻，却一直保留着一组无法归类的脚印：它们每年都从林中走向聚落，从不返回。</p></div></div></article>
+        <article class="character" style="--head-y:17%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-hearth-line-continuer-v1.png" alt="炉边续谱者" loading="lazy"></span><span class="character-name">炉边续谱者</span></button><div class="biography"><div><p>他出生于一个几经迁徙的大家庭，家中的谱带因火灾只剩三段焦边。此后他走访分散各处的亲属，以口述、旧物和共同记忆续回断裂部分，并坚持每次添入新名都必须有人在火塘旁作证。他擅长让陌生人重新坐到一张席上，但面对自己的身世却保持沉默，因为谱带最中央那块空白正属于他。</p></div></div></article>
+        <article class="character" style="--head-y:20%"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-seat-adjudicator-v1.png" alt="边镇判席者" loading="lazy"></span><span class="character-name">边镇判席者</span></button><div class="biography"><div><p>她曾是边镇门口的货物记录员，见过太多旧物被奉为凭证，也见过新来者因没有凭证而被拒之门外。一次争执中，她把祖传谱牌与一个孩子随身携带的破布同时放上秤架，第一次提出“来处”与“共同生活”应有相同重量。后来她成为判席者，为陌生的新灵和新居民决定位置；她的裁决常使双方都不满意，却很少让任何一方彻底消失。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-road-drum-welcomer-v1.png" alt="鼓路迎灵者" loading="lazy"></span><span class="character-name">鼓路迎灵者</span></button><div class="biography"><div><p>她年轻时负责在暴雪中往返各处传讯，逐渐发现失散者更容易跟随有节律的声音找到归路。她把沿途山口编成鼓点，边走边击，让离群者、新来者和未能归家的记忆都能循声接近聚落。去年冬天，一条早已废弃的旧路第一次从远处回应了她的鼓声。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-paper-bridge-name-sender-v1.png" alt="纸桥送名者" loading="lazy"></span><span class="character-name">纸桥送名者</span></button><div class="biography"><div><p>他出身于替各家保管名录的家庭，却曾遇到一位没有任何记录的亡者。为了让无名者也能离席，他折出一座可以逐节展开的纸桥，以一盏空白名灯代替缺失的谱牌。此后他专门处理无法归入旧谱的告别；腰间始终留着一盏不曾点亮的灯，等待一个他不愿送走的名字。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-hunting-remnant-returner-v1.png" alt="猎骨还林者" loading="lazy"></span><span class="character-name">猎骨还林者</span></button><div class="biography"><div><p>她在猎人家庭长大，却因看到被随意遗弃的猎物残件而拒绝第一次出猎。后来她制作归还架，逐件辨认残留物的来处，再把它们送回对应的林界，使索取与归还保持可见。她的架上常年空着一个位置，因为父亲最后一次入山后，只找回了路线牌，没有找到可以归还的遗物。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-dream-translator-v1.png" alt="双语译梦者" loading="lazy"></span><span class="character-name">双语译梦者</span></button><div class="biography"><div><p>他在使用两种语言、两套亲属称谓的家庭中长大，很早就知道同一场梦可以被讲成不同的故事。他以双面梦牌保存图形路径，以结绳保存口述节奏，负责让不同支系在不抹平差异的前提下理解彼此。只是他越来越怀疑：每一次准确翻译，也会悄悄制造第三种原本不存在的含义。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-snowbank-kin-recognizer-v1.png" alt="雪岸认亲者" loading="lazy"></span><span class="character-name">雪岸认亲者</span></button><div class="biography"><div><p>她出生在多次迁徙后重新聚合的河岸村落，许多人只记得亲人的乳名，却说不清他们属于哪一支。她用气味谱带、旧衣纤维和掌印恢复称谓，让失散者重新获得被呼唤的位置。她能替别人找回亲缘，却始终无法确认母亲来自雪岸上游的哪一户；那条对应的谱带至今没有结尾。</p></div></div></article>
+        <article class="character"><button class="character-toggle" type="button" aria-expanded="false"><span class="portrait"><img src="assets/confluence-border-hearth-alliance-maker-v1.png" alt="边炉结盟者" loading="lazy"></span><span class="character-name">边炉结盟者</span></button><div class="biography"><div><p>他成长的边镇曾因水源与猎界争执多年，两边甚至拒绝使用同一处炉火。一次严寒断粮后，他把共火炉盘放在界线上，让双方从同一壶水分别斟入两只杯中，第一次订下互助席位。如今他为新旧居民主持结盟，炉盘却总保留第三只空杯——留给尚未被任何一方承认的人。</p></div></div></article>
       </div>
     </section>
   </main>
-
-  <footer><span>山中萨满 · 世界观与角色档案</span><span>持续生长中的私人设定集</span></footer>
-
-  <dialog class="lightbox" aria-label="角色图片预览">
-    <button class="close" aria-label="关闭预览">×</button>
-    <img src="" alt="">
-    <p></p>
-  </dialog>
   <script src="script.js"></script>
 </body>
 </html>
