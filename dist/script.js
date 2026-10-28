@@ -2,6 +2,22 @@ document.querySelectorAll('img[loading="lazy"]').forEach((image) => {
   image.loading = 'eager';
 });
 
+const historyMap = document.querySelector('.history-map');
+const historyChapters = document.querySelectorAll('.history-chapter');
+
+if (historyMap && historyChapters.length) {
+  const historyObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    historyMap.dataset.state = visible.target.dataset.mapState;
+    historyChapters.forEach((chapter) => chapter.classList.toggle('is-current', chapter === visible.target));
+  }, { rootMargin: '-24% 0px -42% 0px', threshold: [0, .2, .45, .7] });
+
+  historyChapters.forEach((chapter) => historyObserver.observe(chapter));
+}
+
 const factionProfiles = {
   tide: {
     description: '他们相信山腹仍保存着古海的潮路。萨满通过倾听、测量、引导与穿越，维持地下水脉之间的流动关系；聚落则依靠他们寻找水源、判断渔汛、维护渡路和制造轻型水工器具。现实传统在这里提供的是理解身体与环境的结构，不是可直接搬用的服装或仪式目录。',
