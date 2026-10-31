@@ -70,3 +70,42 @@ button{font:inherit;color:inherit}
 @media(max-width:860px){.masthead{min-height:240px}.history-map-heading{top:18px}.history-map-heading strong{font-size:26px}.history-map-key{flex-direction:column;gap:8px}.history-copy{padding-left:14px;padding-right:14px}.history-chapter{width:min(620px,92vw);min-height:auto;margin-bottom:42vh;padding:28px 24px}.history-chapter:nth-child(even){margin-left:auto}.history-chapter h2{font-size:46px}.genealogy-plate{grid-template-columns:1fr;gap:30px;padding:72px 20px}.genealogy-plate img{justify-self:center;width:min(100%,720px)}.genealogy-plate figcaption{max-width:620px}.faction-grid{grid-template-columns:repeat(3,minmax(300px,1fr));overflow-x:auto;scroll-snap-type:x proximity}.faction-column{scroll-snap-align:start}.faction-intro{min-height:160px}.faction-intro.is-open{min-height:620px}}
 @media(max-width:540px){.masthead{min-height:210px;padding:40px 18px}.masthead-mark{width:100px}.genealogy-plate{padding:56px 14px}.genealogy-plate figcaption{gap:12px}.genealogy-plate figcaption strong{font-size:24px}.faction-grid{grid-template-columns:repeat(3,minmax(84vw,1fr))}.faction-column{padding:12px}.faction-totem{top:14px;right:14px;width:108px}.character-name{font-size:22px}.portrait{height:104px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Three-era history atlas */
+.history-era-map{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;filter:brightness(.52) saturate(.72) contrast(1.04);transform:scale(1.025);transition:opacity 1s ease,filter 1s ease,transform 5s cubic-bezier(.2,.75,.15,1)}
+.history-map-base,.history-map-overlay{opacity:0;transition:opacity .8s ease,filter 1.2s ease,transform 5s cubic-bezier(.2,.75,.15,1)}
+.history-map[data-state="ancient"] .history-era-ancient{opacity:1;filter:brightness(.58) saturate(.74) contrast(1.04)}
+.history-map[data-state="retreat"] .history-era-retreat,.history-map[data-state="four"] .history-era-retreat{opacity:1}
+.history-map[data-state="four"] .history-era-retreat{filter:grayscale(.25) brightness(.42) saturate(.62) contrast(1.08);transform:scale(1.055)}
+.history-map[data-state="black"] .history-map-base,.history-map[data-state="black"] .history-map-overlay,.history-map[data-state="anomaly"] .history-map-base,.history-map[data-state="anomaly"] .history-map-overlay,.history-map[data-state="diagnosis"] .history-map-base,.history-map[data-state="diagnosis"] .history-map-overlay,.history-map[data-state="rupture"] .history-map-base,.history-map[data-state="rupture"] .history-map-overlay{opacity:1}
+.history-map[data-state="current"] .history-era-current{opacity:1;filter:brightness(.62) saturate(.8) contrast(1.04)}
+.era-map-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:0;padding:clamp(42px,7vw,104px) clamp(18px,5vw,82px);background:#0b0d0c;border-bottom:1px solid var(--line)}
+.era-map-strip div{position:relative;overflow:hidden;background:#151714;border:1px solid rgba(232,229,219,.16)}
+.era-map-strip img{display:block;width:100%;aspect-ratio:1.08/1;object-fit:cover;filter:saturate(.68) brightness(.82);transition:filter .6s ease,transform 1.2s cubic-bezier(.2,.75,.15,1)}
+.era-map-strip div:hover img{filter:saturate(.88) brightness(.96);transform:scale(1.025)}
+.era-map-strip div span{position:absolute;left:18px;bottom:16px;padding:7px 10px;background:rgba(11,13,12,.78);font-family:"Songti SC","STSong",serif;font-size:14px;letter-spacing:.12em}
+.era-map-strip figcaption{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-top:22px}
+.era-map-strip figcaption small{font-family:Panacea,"Arial Narrow",sans-serif;font-size:11px;letter-spacing:.18em;color:#9c8c69}
+.era-map-strip figcaption strong{font-family:"Songti SC","STSong",serif;font-size:clamp(20px,2.6vw,38px);font-weight:500}
+@media(max-width:860px){.era-map-strip{grid-template-columns:1fr;padding:52px 18px}.era-map-strip figcaption{display:grid}}
+
+/* Ancient role portraits and body atlas */
+.ancient-archetypes{padding:clamp(72px,9vw,148px) clamp(18px,5vw,82px);background:#111312;border-bottom:1px solid var(--line)}
+.ancient-archetypes-heading{display:grid;grid-template-columns:minmax(150px,1fr) minmax(280px,2.4fr);gap:clamp(24px,5vw,84px);align-items:start;margin-bottom:clamp(38px,6vw,82px)}
+.ancient-archetypes-heading span,.vitruvian-plate figcaption span{font-family:Panacea,"Arial Narrow",sans-serif;font-size:11px;letter-spacing:.18em;color:#7894a4}
+.ancient-archetypes-heading h2{margin:0;max-width:24em;font-family:"Songti SC","STSong",serif;font-size:clamp(28px,4vw,58px);font-weight:500;line-height:1.35}
+.ancient-archetype-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(232,229,219,.14);border:1px solid rgba(232,229,219,.14)}
+.ancient-archetype-card{margin:0;min-width:0;background:#0b0d0c}
+.ancient-archetype-card img{display:block;width:100%;aspect-ratio:.55/1;object-fit:cover;object-position:center;filter:saturate(.78) brightness(.9);transition:filter .6s ease,transform 1s cubic-bezier(.2,.75,.15,1)}
+.ancient-archetype-card:hover img{filter:saturate(1) brightness(1);transform:scale(1.012)}
+.ancient-archetype-card figcaption{display:grid;grid-template-columns:auto 1fr;gap:7px 12px;min-height:190px;padding:22px;border-top:1px solid rgba(232,229,219,.14)}
+.ancient-archetype-card figcaption span{font-family:Panacea,"Arial Narrow",sans-serif;font-size:11px;color:#7894a4}
+.ancient-archetype-card figcaption strong{font-family:"Songti SC","STSong",serif;font-size:clamp(22px,2.2vw,34px);font-weight:500}
+.ancient-archetype-card figcaption p{grid-column:1/-1;margin:12px 0 0;color:var(--soft);font-family:"Songti SC","STSong",serif;font-size:14px;line-height:1.75}
+.vitruvian-plate{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.7fr);align-items:center;gap:clamp(32px,6vw,96px);margin:0;padding:clamp(72px,10vw,160px) clamp(18px,7vw,120px);background:#0b0d0c;border-bottom:1px solid var(--line)}
+.vitruvian-plate img{display:block;width:min(100%,960px);height:auto;border:1px solid rgba(232,229,219,.16);box-shadow:0 30px 90px rgba(0,0,0,.34)}
+.vitruvian-plate figcaption{display:grid;gap:20px;max-width:420px}
+.vitruvian-plate figcaption strong{font-family:"Songti SC","STSong",serif;font-size:clamp(26px,3.5vw,52px);font-weight:500;line-height:1.4}
+.vitruvian-plate figcaption p{margin:0;color:var(--soft);font-family:"Songti SC","STSong",serif;font-size:15px;line-height:1.85}
+@media(max-width:900px){.ancient-archetype-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vitruvian-plate{grid-template-columns:1fr}.vitruvian-plate img{justify-self:center}.vitruvian-plate figcaption{max-width:680px}}
+@media(max-width:540px){.ancient-archetypes{padding:58px 14px}.ancient-archetypes-heading{grid-template-columns:1fr}.ancient-archetype-grid{grid-template-columns:1fr}.ancient-archetype-card img{aspect-ratio:.72/1}.ancient-archetype-card figcaption{min-height:auto}.vitruvian-plate{padding:58px 14px}}

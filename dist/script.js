@@ -4,6 +4,18 @@ document.querySelectorAll('img[loading="lazy"]').forEach((image) => {
 
 const historyMap = document.querySelector('.history-map');
 const historyChapters = document.querySelectorAll('.history-chapter');
+const historyHeading = historyMap?.querySelector('.history-map-heading');
+
+const historyHeadings = {
+  ancient: ['退海纪以前', '山曾经是海'],
+  retreat: ['退海纪', '追随退去的水'],
+  four: ['四职时代', '同一张黑毡'],
+  black: ['三盟前史', '山曾经只有一种声音'],
+  anomaly: ['第一次山腹危机', '无声的井'],
+  diagnosis: ['封潮议会', '三种诊断'],
+  rupture: ['断山夜', '三种颜色出现'],
+  current: ['三盟当代', '三种责任']
+};
 
 if (historyMap && historyChapters.length) {
   const historyObserver = new IntersectionObserver((entries) => {
@@ -11,7 +23,12 @@ if (historyMap && historyChapters.length) {
       .filter((entry) => entry.isIntersecting)
       .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
     if (!visible) return;
-    historyMap.dataset.state = visible.target.dataset.mapState;
+    const state = visible.target.dataset.mapState;
+    historyMap.dataset.state = state;
+    if (historyHeading) {
+      historyHeading.querySelector('span').textContent = historyHeadings[state][0];
+      historyHeading.querySelector('strong').textContent = historyHeadings[state][1];
+    }
     historyChapters.forEach((chapter) => chapter.classList.toggle('is-current', chapter === visible.target));
   }, { rootMargin: '-24% 0px -42% 0px', threshold: [0, .2, .45, .7] });
 
