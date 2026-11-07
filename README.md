@@ -118,6 +118,9 @@ stencil 项目尝试把人物插画转化为可分层喷涂、可重复套色、
 ## 项目内容
 
 - `dist/`：三大阵营与人物档案网页
+- `dist/field-records.html`：按拍摄时间排序的 stencil 现场照片与百度地图记录
+- `tools/build-field-record-map-assets.py`：统一生成 `900 × 900`、`zoom=18` 的百度地图标注图
+- `docs/FIELD_RECORDS_WORKFLOW.md`：新照片收录、地图生成、验证与发布流程
 - `docs/readme-assets/`：README 使用的项目图像
 - `.github/workflows/pages.yml`：GitHub Pages 发布流程
 

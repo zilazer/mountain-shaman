@@ -1,0 +1,34 @@
+@font-face{font-family:Panacea;src:url("assets/PanaceaArchitectural-Regular.ttf") format("truetype");font-display:swap}
+:root{--ink:#111312;--deep:#0b0d0c;--paper:#e8e5db;--line:rgba(232,229,219,.2);--soft:rgba(232,229,219,.68);--accent:#7894a4}
+*{box-sizing:border-box}
+html{background:var(--ink);scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:"Noto Sans SC","PingFang SC",sans-serif}
+a{color:inherit}
+.records-masthead{position:relative;display:grid;grid-template-columns:minmax(110px,14vw) 1fr;align-items:end;gap:clamp(28px,5vw,80px);min-height:clamp(330px,54vh,620px);padding:clamp(82px,10vw,150px) clamp(18px,6vw,100px) clamp(52px,7vw,96px);background:var(--deep);border-bottom:1px solid var(--line)}
+.records-mark{display:block;width:100%;max-width:200px;height:auto;opacity:.92}
+.back-link{position:absolute;top:26px;left:clamp(18px,3vw,48px);font-family:Panacea,"Arial Narrow",sans-serif;font-size:11px;letter-spacing:.16em;text-decoration:none;color:var(--soft)}
+.back-link:hover{color:var(--paper)}
+.records-heading{display:grid;gap:12px}
+.records-heading span,.records-heading p{margin:0;font-family:Panacea,"Arial Narrow",sans-serif;font-size:11px;letter-spacing:.2em;color:var(--accent)}
+.records-heading h1{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(48px,8vw,118px);font-weight:500;line-height:.94;letter-spacing:.04em}
+.records-heading p{color:var(--soft);letter-spacing:.14em}
+.records-list{display:grid;padding:0 clamp(18px,5vw,82px);background:var(--ink)}
+.record{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,4vw,68px);align-items:stretch;padding:clamp(62px,9vw,132px) 0;border-bottom:1px solid var(--line)}
+.record-photo{display:grid;grid-template-rows:1fr auto;min-width:0;margin:0}
+.record-media{position:relative;min-height:clamp(360px,48vw,720px);overflow:hidden;background:#080a09;border:1px solid rgba(232,229,219,.16)}
+.record-media img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.86) contrast(1.03)}
+.record-photo figcaption{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:24px;padding:18px 0 0;border-top:1px solid var(--line)}
+.record-photo strong{font-family:Panacea,"Arial Narrow",sans-serif;font-size:clamp(25px,3vw,42px);font-weight:400;letter-spacing:.12em;color:var(--accent)}
+.record-photo time{justify-self:end;font-family:Panacea,"Arial Narrow",sans-serif;font-size:12px;letter-spacing:.16em;color:var(--soft)}
+.record-location{min-width:0;align-self:start}
+.record-map{position:relative;display:block;aspect-ratio:1422 / 1342;overflow:hidden;background:#181a18;border:1px solid rgba(232,229,219,.16)}
+.record-map img{display:block;width:100%;height:100%;object-fit:contain}
+.record-map--crop img{position:absolute;width:157.8947%;height:auto;max-width:none;left:-48.5965%;top:-11.5233%}
+.record-map-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 18px;padding-top:12px;color:var(--soft);font-size:11px}
+.record-map-links a:first-child{font-family:Panacea,"Arial Narrow",sans-serif;letter-spacing:.12em}
+.record-map-links a{text-underline-offset:3px}
+.record-map:focus-visible,.record-map-links a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.records-footer{display:flex;justify-content:space-between;gap:20px;padding:32px clamp(18px,5vw,82px) 52px;font-family:Panacea,"Arial Narrow",sans-serif;font-size:10px;letter-spacing:.17em;color:var(--soft)}
+@media(max-width:780px){.records-masthead{grid-template-columns:86px 1fr;min-height:360px;padding-top:92px}.record{grid-template-columns:1fr;gap:20px;padding:56px 0}.record-media{min-height:72vw}.record-photo figcaption{gap:12px}.record-photo time{font-size:10px;letter-spacing:.1em}}
+@media(max-width:480px){.records-masthead{grid-template-columns:1fr;align-items:start;gap:28px}.records-mark{width:84px}.records-heading h1{font-size:56px}.record-media{min-height:92vw}.records-footer{flex-direction:column}.record-photo time{justify-self:end}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

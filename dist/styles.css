@@ -4,8 +4,9 @@
 html{background:var(--ink);scroll-behavior:smooth}
 body{margin:0;background:var(--ink);color:var(--paper);font-family:"Noto Sans SC","PingFang SC",sans-serif}
 button{font:inherit;color:inherit}
-.masthead{display:flex;align-items:center;justify-content:center;min-height:clamp(260px,36vh,420px);padding:56px clamp(18px,4vw,72px);border-bottom:1px solid var(--line)}
+.masthead{position:relative;display:flex;align-items:center;justify-content:center;min-height:clamp(260px,36vh,420px);padding:56px clamp(18px,4vw,72px);border-bottom:1px solid var(--line)}
 .masthead-mark{display:block;width:clamp(124px,14vw,224px);height:auto}
+.field-records-entry{position:absolute;right:clamp(18px,3vw,48px);bottom:26px;font-family:Panacea,"Arial Narrow",sans-serif;font-size:11px;letter-spacing:.16em;color:var(--soft);text-decoration:none}.field-records-entry:hover{color:var(--paper)}.field-records-entry:focus-visible{outline:2px solid #7894a4;outline-offset:4px}
 .history-prologue{position:relative;background:#0b0d0c;border-bottom:1px solid var(--line)}
 .history-map{position:sticky;z-index:0;top:0;height:100vh;overflow:hidden;background:#080a09}
 .history-map::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,8,.26),rgba(7,9,8,.04) 52%,rgba(7,9,8,.38)),linear-gradient(0deg,rgba(7,9,8,.52),transparent 26%,rgba(7,9,8,.18));pointer-events:none}
