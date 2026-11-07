@@ -1,7 +1,3 @@
-document.querySelectorAll('img[loading="lazy"]').forEach((image) => {
-  image.loading = 'eager';
-});
-
 const historyMap = document.querySelector('.history-map');
 const historyChapters = document.querySelectorAll('.history-chapter');
 const historyHeading = historyMap?.querySelector('.history-map-heading');
