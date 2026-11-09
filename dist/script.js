@@ -127,11 +127,68 @@ document.querySelectorAll('.faction-intro').forEach((button) => {
   });
 });
 
+let activeParallax;
+let motionEnabled = false;
+const supportFront = new Set(['eel-line-abyss-measurer-v1', 'ray-veil-dream-keeper-v1', 'red-vein-hinged-gate-caster-v1', 'confluence-paper-bridge-name-sender-v1']);
+const setParallax = (stage, value) => stage?.style.setProperty('--shift', Math.max(-1, Math.min(1, value)).toFixed(3));
+
+function mountParallax(card) {
+  const portrait = card.querySelector('.portrait');
+  if (portrait.querySelector('.parallax-stage')) return portrait.querySelector('.parallax-stage');
+  const original = portrait.querySelector('img');
+  const stem = original.getAttribute('src').split('/').pop().replace(/\.(png|webp)$/, '');
+  const stage = document.createElement('span');
+  stage.className = `parallax-stage${supportFront.has(stem) ? ' support-front' : ''}`;
+  for (const layer of ['background', 'character', 'foreground']) {
+    const image = document.createElement('img');
+    image.className = `parallax-layer ${layer === 'background' ? 'back' : layer === 'character' ? 'middle' : 'front'}`;
+    image.src = `assets/parallax/${stem}/${layer}.webp`;
+    image.alt = '';
+    image.decoding = 'async';
+    stage.append(image);
+  }
+  stage.addEventListener('pointermove', (event) => {
+    if (event.pointerType !== 'mouse') return;
+    const bounds = stage.getBoundingClientRect();
+    setParallax(stage, (event.clientX - bounds.left - bounds.width / 2) / (bounds.width / 2));
+  });
+  stage.addEventListener('pointerleave', () => setParallax(stage, 0));
+  portrait.append(stage);
+
+  const motionButton = document.createElement('button');
+  motionButton.className = 'motion-toggle';
+  motionButton.type = 'button';
+  motionButton.textContent = motionEnabled ? '摇动视差已启用' : '启用手机摇动视差';
+  motionButton.addEventListener('click', async () => {
+    if (motionEnabled) return;
+    if (typeof DeviceOrientationEvent === 'undefined') {
+      motionButton.textContent = '此设备不支持方向感应';
+      return;
+    }
+    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+      const permission = await DeviceOrientationEvent.requestPermission();
+      if (permission !== 'granted') return;
+    }
+    motionEnabled = true;
+    document.querySelectorAll('.motion-toggle').forEach((item) => { item.textContent = '摇动视差已启用'; });
+    window.addEventListener('deviceorientation', (event) => {
+      if (event.gamma != null) setParallax(activeParallax, event.gamma / 25);
+    });
+  });
+  card.querySelector('.biography > div').prepend(motionButton);
+  return stage;
+}
+
 document.querySelectorAll('.character-toggle').forEach((button) => {
   button.addEventListener('click', () => {
     const card = button.closest('.character');
     const open = card.classList.toggle('is-open');
     button.setAttribute('aria-expanded', String(open));
-    if (open) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (open) {
+      activeParallax = mountParallax(card);
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else if (activeParallax === card.querySelector('.parallax-stage')) {
+      activeParallax = undefined;
+    }
   });
 });
